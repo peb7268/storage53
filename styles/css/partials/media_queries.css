@@ -1,0 +1,254 @@
+/* Media Queries */
+@media (max-width: 1450px) {
+  .hero {
+    max-height: 500px; } }
+
+@media (max-width: 1200px) {
+  .hero {
+    max-height: 470px; } }
+
+@media (max-width: 1080px) {
+  .hero {
+    max-height: 430px; } }
+
+@media (max-width: 990px) {
+  .hero {
+    max-height: 350px; }
+  #page.hero .message {
+    top: 128px;
+    left: initial;
+    width: 48.5%;
+    right: 2%; }
+    #page.hero .message h2 {
+      font-size: 22pt; }
+    #page.hero .message p {
+      font-size: 18pt; } }
+
+@media (max-width: 768px) {
+  .hero {
+    max-height: 275px; }
+  #page.hero .message {
+    top: 100px; }
+    #page.hero .message h2 {
+      font-size: 17pt; }
+    #page.hero .message p {
+      font-size: 16pt; } }
+
+/* -- Portrait Only -- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #page .hero .message {
+    top: 120px; }
+    #page .hero .message h2 {
+      font-size: 19pt; }
+    #page .hero .message p {
+      font-size: 14pt; }
+  #slide2.hero .message {
+    top: 110px; }
+    #slide2.hero .message h2 {
+      font-size: 19pt; }
+    #slide2.hero .message p {
+      font-size: 14pt; }
+  #slide3.hero .message {
+    top: 110px; }
+    #slide3.hero .message h2#what-we-do {
+      padding: 10px;
+      min-height: initial;
+      background: rgba(156, 155, 178, 0.8);
+      border: 1px solid #9c9bb2; }
+      #slide3.hero .message h2#what-we-do div, #slide3.hero .message h2#what-we-do div:nth-child(2) {
+        position: initial;
+        margin: initial;
+        padding: initial;
+        width: initial; }
+        #slide3.hero .message h2#what-we-do div span, #slide3.hero .message h2#what-we-do div:first-child span, #slide3.hero .message h2#what-we-do div:nth-child(2) span, #slide3.hero .message h2#what-we-do div:nth-child(2):first-child span {
+          display: initial;
+          font-size: inherit;
+          word-spacing: normal; }
+    #slide3.hero .message p {
+      display: none; } }
+
+/* Nav change 1 */
+@media (max-width: 680px) {
+  .hero {
+    max-height: 275px;
+    margin: 105px auto 45px auto; }
+  #page .hero .message {
+    top: 60px;
+    right: 3.5%; }
+    #page .hero .message h2 {
+      font-size: 17pt; }
+    #page .hero .message p {
+      font-size: 16pt; } }
+
+@media (max-width: 635px) {
+  .hero {
+    max-height: 250px; }
+  #page #slide2.hero .message p {
+    font-size: 12pt; } }
+
+@media (max-width: 580px) {
+  .hero {
+    max-height: 220px; }
+  .gallery #canvas {
+    height: initial; }
+    .gallery #canvas img {
+      max-width: 100%; } }
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 0 3px; }
+  .fa-bars {
+    display: inline-block; }
+  #nav {
+    display: none; }
+    #nav li {
+      float: none; }
+      #nav li span, #nav li a {
+        display: block; }
+  #details li {
+    width: 100%;
+    float: none;
+    margin: 25px auto; }
+  #details a {
+    display: block; }
+    #details a img {
+      max-width: 100%; }
+  #getInTouch {
+    float: none;
+    margin-bottom: 50px;
+    width: 98%; }
+  .sidebar {
+    float: none;
+    width: 98%; }
+  #footer ul {
+    overflow: auto;
+    padding-bottom: 65px; }
+  #footer li {
+    float: none;
+    width: 99%;
+    margin: 0 auto;
+    min-height: initial;
+    border-bottom: 1px solid #333;
+    border-right: none;
+    border-left: none; }
+    #footer li:nth-child(2), #footer li:last-child {
+      border-top: 1px solid #555; }
+    #footer li:last-child {
+      border-bottom: none; }
+  #footerToggle {
+    bottom: 65px; } }
+
+@media (max-width: 505px) {
+  #nav {
+    float: none;
+    position: relative;
+    width: 90%;
+    margin: 0 auto; }
+  #page .hero {
+    max-height: 200px;
+    margin: 58px auto 25px auto; }
+    #page .hero .message {
+      width: 55% !important; }
+      #page .hero .message h2 {
+        font-size: 12pt;
+        font-weight: 100; }
+      #page .hero .message p {
+        font-size: 14pt; } }
+
+@media (max-width: 375px) {
+  header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 0 3px; }
+  .fa-bars {
+    display: inline-block; }
+  #nav {
+    display: none; }
+    #nav li {
+      float: none; }
+      #nav li span, #nav li a {
+        display: block; }
+  #page .hero {
+    max-height: 130px;
+    margin-top: 55px; }
+    #page .hero .message {
+      top: 22px;
+      right: 5%;
+      left: initial; }
+      #page .hero .message h2 {
+        font-size: 10pt; }
+      #page .hero .message p {
+        font-size: 11pt;
+        line-height: 1; }
+  #page #slide2.hero .message {
+    top: 45px; }
+    #page #slide2.hero .message h2 {
+      font-size: 13pt;
+      border: 1px solid #b30000;
+      box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.42); }
+    #page #slide2.hero .message p {
+      display: none; }
+  #page #slide3.hero h2#what-we-do div:first-child {
+    width: 100%; }
+    #page #slide3.hero h2#what-we-do div:first-child span:first-child {
+      font-size: 20pt;
+      display: initial;
+      text-transform: initial;
+      margin: initial; }
+    #page #slide3.hero h2#what-we-do div:first-child span:last-child {
+      font-size: 20pt; }
+  #page #slide3.hero h2#what-we-do div:nth-child(2) {
+    width: 100%;
+    padding: 25px 0 0 0px;
+    margin: 0;
+    overflow: hidden; }
+    #page #slide3.hero h2#what-we-do div:nth-child(2) span:first-child {
+      font-size: 20pt;
+      display: initial;
+      text-transform: initial;
+      word-spacing: initial;
+      margin: initial;
+      line-height: 1.4; }
+    #page #slide3.hero h2#what-we-do div:nth-child(2) span:last-child {
+      font-size: 20pt;
+      margin: -6px 0 0 0; }
+  #page #slide4.hero .message {
+    width: 47% !important;
+    right: 2%; }
+    #page #slide4.hero .message h2 {
+      font-size: 14pt;
+      line-height: 1.2; }
+    #page #slide4.hero .message p {
+      display: none; }
+  #details li {
+    width: 100%;
+    float: none;
+    margin: 25px auto; }
+  #details a {
+    display: block; }
+    #details a img {
+      max-width: 100%; }
+  #getInTouch {
+    float: none;
+    margin-bottom: 50px;
+    width: 98%; }
+  .sidebar {
+    float: none;
+    width: 98%; }
+  #footer ul {
+    overflow: auto;
+    padding-bottom: 65px; }
+  #footer li {
+    float: none;
+    width: 99%;
+    margin: 0 auto;
+    min-height: initial;
+    border-bottom: 1px solid #333;
+    border-right: none;
+    border-left: none; }
+    #footer li:nth-child(2), #footer li:last-child {
+      border-top: 1px solid #555; }
+    #footer li:last-child {
+      border-bottom: none; }
+  #footerToggle {
+    bottom: 65px; } }

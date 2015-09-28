@@ -1,0 +1,44 @@
+/* -- Portrait Only -- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .hero { }
+  #page .hero .message {
+    top: 120px;
+
+    h2 { font-size: 19pt; }
+    p { font-size: 14pt; }
+  }
+  #slide2.hero .message {
+    top: 110px;
+
+    h2 { font-size: 19pt; }
+    p { font-size: 14pt; }
+  }
+  #slide3.hero .message {
+    top: 110px;
+
+    h2#what-we-do {
+      padding: 10px;
+      min-height: initial;
+      background: rgba(156, 155, 178, 0.8);
+      border: 1px solid rgb(156, 155, 178);
+
+      div, div:nth-child(2) {
+        position: initial;
+        margin: initial;
+        padding: initial;
+        width: initial;
+
+        & span, &:first-child  span {
+          display: initial;
+          font-size: inherit;
+          word-spacing: normal;
+        }
+      }
+    }
+    p { display: none; }
+  }
+}
+

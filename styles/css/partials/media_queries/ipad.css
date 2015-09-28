@@ -1,0 +1,32 @@
+/* -- Portrait Only -- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #page .hero .message {
+    top: 120px; }
+    #page .hero .message h2 {
+      font-size: 19pt; }
+    #page .hero .message p {
+      font-size: 14pt; }
+  #slide2.hero .message {
+    top: 110px; }
+    #slide2.hero .message h2 {
+      font-size: 19pt; }
+    #slide2.hero .message p {
+      font-size: 14pt; }
+  #slide3.hero .message {
+    top: 110px; }
+    #slide3.hero .message h2#what-we-do {
+      padding: 10px;
+      min-height: initial;
+      background: rgba(156, 155, 178, 0.8);
+      border: 1px solid #9c9bb2; }
+      #slide3.hero .message h2#what-we-do div, #slide3.hero .message h2#what-we-do div:nth-child(2) {
+        position: initial;
+        margin: initial;
+        padding: initial;
+        width: initial; }
+        #slide3.hero .message h2#what-we-do div span, #slide3.hero .message h2#what-we-do div:first-child span, #slide3.hero .message h2#what-we-do div:nth-child(2) span, #slide3.hero .message h2#what-we-do div:nth-child(2):first-child span {
+          display: initial;
+          font-size: inherit;
+          word-spacing: normal; }
+    #slide3.hero .message p {
+      display: none; } }
