@@ -14,8 +14,14 @@
     <div class="wrapper">
         <a href="<?php bloginfo('url') ?>" id="logo">
             <h1 class="title">
-                <img src="<?php echo TEMPLATE_DIR ?>/img/storage53_logo.png" alt="Storage53">
+                <span>
+                    Storage53
+                </span>
+                <span>
+                    | RV &amp; Boat Self Storage
+                </span>
             </h1>
+
         </a>
         <i class="fa fa-bars"></i>
         <ul id="nav">

@@ -10,18 +10,16 @@ App.controller('AppController', ['$scope', function($scope){
     var hash 	= window.location.hash;
 	
 	$scope.togglePage = function($event, $i){
-		console.log('toggling to page: ', $i);
+		if(typeof $i == 'undefined') $i = 1;
     	$scope.tab = $i;
     };
 
 	
 	hash 				= (hash.length > 0) ? hash : '#home';
 	var $link 			= jQuery('#nav li').find('a[href="'+hash+'"]');
-	var idx 			= $link.data('index');
+	var idx 			= (typeof $link.data('index') !== 'undefined') ? $link.data('index') : 1;
 	$scope.navTarget 	= $link;
 	$scope.tab 			= idx;
 	
-	
-	console.log('navigating to link: ', idx);
 	jQuery($scope.navTarget).click();			
 }]);

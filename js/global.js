@@ -108,6 +108,12 @@
             });
         });
 
+        function toggleTermsAndConditions(evt){
+            evt.preventDefault();
+            $(evt.target).parent().parent().parent().addClass('selected');
+            $('#termsAndConditions, #tandcAgree, p.em').fadeToggle(100);
+        }
+
         $('#services a.back').on('click', function(e){
             e.preventDefault();
             var $content = $(this).parent().parent().parent().parent().find('> .content');
@@ -122,6 +128,16 @@
             });
         });
 
+        $('.email a').on('click', footerToggle);
+        $('.reserve a').on('click', toggleTermsAndConditions);
+        
+        $('#termsAndConditions').on('scroll', function(evt){
+            var currentPos   = $(evt.target).scrollTop();
+            
+            if(currentPos > 665) {
+                $('form input[type="submit"]').removeAttr('disabled');
+            }
+        });
     });
 })(jQuery)
 
