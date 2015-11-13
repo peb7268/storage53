@@ -119,9 +119,10 @@ header {
   display: none;
   position: absolute;
   right: 3.5%;
-  top: 15px;
-  font-size: 16pt;
-  color: #0d5f17; }
+  top: 19px;
+  font-size: 20pt;
+  color: #0d5f17;
+  z-index: 9999; }
   .fa-bars:hover {
     cursor: pointer; }
 
@@ -161,14 +162,18 @@ h2.banner {
   color: #fff;
   box-sizing: border-box;
   padding: 7px 10px;
-  margin: 120px auto 10px auto;
+  margin: 0 auto 10px;
   width: 90%; }
 
 .hero {
-  overflow: hidden; }
+  overflow: hidden;
+  background: #fff;
+  padding: 30px 0 20px; }
   .hero > img {
     width: 100%;
-    margin: 0 auto; }
+    margin: 80px auto -20px;
+    max-width: 960px;
+    display: block; }
   .hero .hero.show {
     display: block; }
 
@@ -448,7 +453,7 @@ ul .fa-info-circle {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  margin: 0 0 7px 0; }
+  margin: 15px 0 7px; }
 
 .content .cta-link {
   display: inline-block;
@@ -602,9 +607,20 @@ p.em {
     #page.hero .message p {
       font-size: 18pt; } }
 
+@media (max-width: 960px) {
+  #logo {
+    display: block;
+    margin: 15px auto;
+    position: initial;
+    width: 500px; }
+  #nav {
+    position: initial;
+    display: block;
+    margin: 0 auto 10px;
+    width: 420px;
+    overflow: hidden; } }
+
 @media (max-width: 768px) {
-  .hero {
-    max-height: 275px; }
   #page.hero .message {
     top: 100px; }
     #page.hero .message h2 {
@@ -613,7 +629,9 @@ p.em {
       font-size: 16pt; } }
 
 /* -- Portrait Only -- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1450px) {
+  .hero img {
+    max-width: 560px; }
   #page .hero .message {
     top: 120px; }
     #page .hero .message h2 {
@@ -667,17 +685,45 @@ p.em {
 @media (max-width: 580px) {
   .hero {
     max-height: 220px; }
+    .hero img {
+      margin: initial;
+      max-width: initial; }
   .gallery #canvas {
     height: initial; }
     .gallery #canvas img {
-      max-width: 100%; } }
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+      max-width: 100%; }
+  .content .cta-link {
+    display: block;
+    width: 95%;
+    margin: 10px auto; }
+  #fanda .list {
+    width: 90%;
+    margin: 0 auto;
+    float: none; }
+  #fanda .right {
+    width: 100%;
+    float: none;
+    margin: 0 auto 15px; }
+    #fanda .right img {
+      margin: 0; }
   header {
+    min-height: 0;
     background: rgba(255, 255, 255, 0.9);
     padding: 10px 0 3px; }
   .fa-bars {
     display: inline-block; }
+  #logo {
+    margin: 0 auto 10px;
+    width: 100%; }
+    #logo h1 span:first-child {
+      display: block;
+      text-align: center;
+      width: 80%;
+      margin: 0 auto; }
+    #logo h1 span:last-child {
+      display: none; }
+  header .wrapper a#logo h1.title span {
+    float: none; }
   #nav {
     display: none; }
     #nav li {
@@ -715,7 +761,15 @@ p.em {
     #footer li:last-child {
       border-bottom: none; }
   #footerToggle {
-    bottom: 65px; } }
+    bottom: 65px; }
+  #rates .rates > li .options li.option.size {
+    width: 70px; }
+  #rates .rates > li .options li.option.desc, #rates .rates > li .options li.option.rate, #rates .rates > li .options li.option.reserve {
+    width: 30%;
+    line-height: 1;
+    padding-top: 15px; }
+  #rates .rates > li .options li.option.rate, #rates .rates > li .options li.option.reserve {
+    width: 15%; } }
 
 @media (max-width: 505px) {
   #nav {

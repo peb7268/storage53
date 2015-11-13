@@ -23,9 +23,24 @@
   }
 }
 
+//Trigger Nav Change
+@media (max-width: 960px) {
+  #logo {
+    display: block;
+    margin: 15px auto;
+    position: initial;
+    width: 500px;
+  }
+  #nav {
+    position: initial;
+    display: block;
+    margin: 0 auto 10px;
+    width: 420px;
+    overflow: hidden;
+  }
+}
 
 @media (max-width: 768px) {
-  .hero { max-height: 275px; }
   #page.hero .message {
     top: 100px;
     h2 { font-size: 17pt; }
@@ -51,29 +66,74 @@
   #page #slide2.hero .message p { font-size: 12pt; }
 }
 
+//iPhone 6 Plus
 @media (max-width: 580px) {
-  .hero { max-height: 220px; }
+  .hero { 
+    max-height: 220px; 
+    img {
+      margin: initial;
+      max-width: initial;
+    }
+  }
   .gallery {
     #canvas {
       height: initial;
       img { max-width: 100%; }
     }
   }
-}
 
-//iPhone 6 Plus
-@media only screen 
-and (min-device-width : 414px) 
-and (max-device-width : 736px) 
-and (orientation : portrait) 
-and (-webkit-min-device-pixel-ratio : 3){ 
+  .content { 
+    .cta-link {
+      display: block;
+      width: 95%;
+      margin: 10px auto;
+    }
+  }
+  
+  #fanda {
+    .list {
+      width: 90%;
+      margin: 0 auto;
+      float: none;
+    }
+    .right {
+      width: 100%;
+      float: none;
+      margin: 0 auto 15px;
+      img { 
+        margin: 0;
+      }
+    }
+  }
+
   header { 
+    min-height: 0;
     background: rgba(255, 255, 255, 0.9); 
     padding: 10px 0 3px; 
   }
   .fa-bars {
     display: inline-block;
   }
+  #logo {
+    margin: 0 auto 10px;
+    width: 100%;
+    h1 {
+      span:first-child { 
+         display: block;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+      }
+      span:last-child { 
+          display: none;
+      }
+    }
+  }
+  
+  header .wrapper a#logo h1.title span {
+    float: none;
+  }
+  
   #nav {
     display: none;
     li {
@@ -82,7 +142,7 @@ and (-webkit-min-device-pixel-ratio : 3){
     }
   }
 
-   #details {
+  #details {
     li { 
       width: 100%; 
       float: none;
@@ -128,6 +188,18 @@ and (-webkit-min-device-pixel-ratio : 3){
   }
 
   #footerToggle { bottom: 65px; }
+
+  #rates {
+    .rates {
+      & > li .options li.option.size { width: 70px; }
+      & > li .options li.option.desc, & > li .options li.option.rate, & > li .options li.option.reserve {
+        width: 30%;
+        line-height: 1;
+        padding-top: 15px;
+      }
+      & > li .options li.option.rate,  & > li .options li.option.reserve { width: 15%; }
+    }
+  }
 }
 
 //Note 4

@@ -10,6 +10,7 @@
 </head>
 
 <body id="page" class="page{{tab}}" ng-controller="AppController as App">
+
 <header>
     <div class="wrapper">
         <a href="<?php bloginfo('url') ?>" id="logo">

@@ -1,5 +1,7 @@
 /* -- Portrait Only -- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1450px) {
+  .hero img {
+    max-width: 560px; }
   #page .hero .message {
     top: 120px; }
     #page .hero .message h2 {

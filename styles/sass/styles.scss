@@ -75,9 +75,10 @@ header {
   display: none;
   position: absolute;
   right: 3.5%;
-  top: 15px;
-  font-size: 16pt;
+  top: 19px;
+  font-size: 20pt;
   color: $primary;
+  z-index: 9999;
   &:hover {
     cursor: pointer;
   }
@@ -125,14 +126,19 @@ h2.banner {
   color: #fff;
   box-sizing: border-box;
   padding: 7px 10px;
-  margin: 120px auto 10px auto;
+  margin: 0 auto 10px;
   width: 90%;
 }
+
 .hero {
-  overflow: hidden;
+    overflow: hidden;
+    background: #fff;
+    padding: 30px 0 20px;
   & > img {
     width: 100%;
-    margin: 0 auto;
+    margin: 80px auto -20px;
+    max-width: 960px;
+    display: block;
   }
   .hero.show {
     display: block;
@@ -454,7 +460,7 @@ ul .fa-info-circle {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
-    margin: 0 0 7px 0;
+    margin: 15px 0 7px;
   }
   .cta-link {
     display: inline-block;
