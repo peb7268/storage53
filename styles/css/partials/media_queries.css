@@ -48,7 +48,7 @@
 /* -- Portrait Only -- */
 @media (max-width: 1450px) {
   .hero img {
-    max-width: 560px; }
+    max-width: 860px; }
   #page .hero .message {
     top: 120px; }
     #page .hero .message h2 {
@@ -141,6 +141,8 @@
       display: none; }
   header .wrapper a#logo h1.title span {
     float: none; }
+  header p.tagline {
+    text-align: center; }
   #nav {
     display: none; }
     #nav li {

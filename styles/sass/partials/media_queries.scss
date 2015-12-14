@@ -133,12 +133,26 @@
   header .wrapper a#logo h1.title span {
     float: none;
   }
+
+  header {
+    .wrapper {
+      #logo {
+        h1.title {
+          p.tagline { 
+            text-align: center; 
+            span { color: $secondary; display: initial; }
+          }
+        }
+      }
+    }
+  }
   
   #nav {
     display: none;
     li {
       float: none;
       span, a { display: block; }
+      a { color: $secondary; }
     }
   }
 
@@ -198,6 +212,20 @@
         padding-top: 15px;
       }
       & > li .options li.option.rate,  & > li .options li.option.reserve { width: 15%; }
+    }
+  }
+
+  #ctas {
+    width: 100%;
+    margin: 30px auto;
+
+    & > li {
+      float: none;
+      margin: 0 auto 50px;
+      width: 100%;
+      text-align: center;
+      & > span { margin: 0 auto; }
+      ul li { list-style: none; }
     }
   }
 }

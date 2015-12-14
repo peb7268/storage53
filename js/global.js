@@ -83,10 +83,19 @@
         $(this).closest('.gallery').find('#canvas').html('').append(img);
     }
 
+    window.showLocation = function(){
+        $('#address').slideToggle(100);
+    }
+
     $('document').ready(function($){
         $('#footerToggle').on('click', footerToggle);
         $('.galleryNav li a').on('click', fillGalleryCanvas);
         $('.galleryNav li:first a img').click();
+        $('.cta-link').on('click', function(evt){
+            evt.preventDefault();
+            var action = $(evt.target).data('action');
+            if(typeof window[action] == 'function') window[action]();
+        });
 
         $('form.contact').on('submit', ajaxSubmitForm);
         

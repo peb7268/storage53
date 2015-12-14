@@ -18,9 +18,9 @@
                 <span>
                     Storage53
                 </span>
-                <span>
-                    | RV &amp; Boat Self Storage
-                </span>
+                <p class="tagline">
+                    RV &amp; Boat <span>Self Storage</span>
+                </p>
             </h1>
 
         </a>

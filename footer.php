@@ -8,16 +8,19 @@
 	    <ul>
 	    	<li>
 	    		<h4>Address</h4>
-	    		<p>2095 Highway 211 NW</p> 
-	    		<p>Suite 2F-161</p> 
-	    		<p>Braselton GA, 30517</p>
+	    		<p>1043 Gainesville Hwy</p> 
+	    		<p>Winder GA, 30680</p>
 				<br>
 				<p>
-					<a href="tel:404-867—3431"><i class="fa fa-phone-square"></i> &nbsp; (404)—867—3431</a>
+					<a href="tel:678-671-7166"><i class="fa fa-phone-square"></i> &nbsp; 678.671.7166</a>
 				</p>
 	    	</li>
 	    	<li id="social">
 	    		<h4>Social</h4>
+	    		<div id="twitter">
+	    			<a class="twitter-timeline" href="https://twitter.com/storage53"  data-chrome="noborders noheader" data-widget-id="676442151807414272">Tweets by @storage53</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	    		</div>	
 	    	</li>
 	    	<li id="contact">
 	    		<h4>Get in touch</h4>
