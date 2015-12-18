@@ -141,14 +141,19 @@
       display: none; }
   header .wrapper a#logo h1.title span {
     float: none; }
-  header p.tagline {
+  header .wrapper #logo h1.title p.tagline {
     text-align: center; }
+    header .wrapper #logo h1.title p.tagline span {
+      color: #2c3f4f;
+      display: initial; }
   #nav {
     display: none; }
     #nav li {
       float: none; }
       #nav li span, #nav li a {
         display: block; }
+      #nav li a {
+        color: #2c3f4f; }
   #details li {
     width: 100%;
     float: none;
@@ -188,7 +193,19 @@
     line-height: 1;
     padding-top: 15px; }
   #rates .rates > li .options li.option.rate, #rates .rates > li .options li.option.reserve {
-    width: 15%; } }
+    width: 15%; }
+  #ctas {
+    width: 100%;
+    margin: 30px auto; }
+    #ctas > li {
+      float: none;
+      margin: 0 auto 50px;
+      width: 100%;
+      text-align: center; }
+      #ctas > li > span {
+        margin: 0 auto; }
+      #ctas > li ul li {
+        list-style: none; } }
 
 @media (max-width: 505px) {
   #nav {

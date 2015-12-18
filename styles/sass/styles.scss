@@ -256,11 +256,11 @@ h2.banner {
 #nav li.call {
   padding: 0;
   border-radius: 1px;
-  span:hover { background-color: $secondary; }
+  span:hover { background-color: $primary; }
   a {
     padding: 2px;
-    color: $secondary;
-    &:hover { color: #fff; background-color: $secondary; }
+    color: #fff;
+    &:hover { color: #fff; }
   }
 }
 
@@ -657,3 +657,5 @@ p.em {
   input[type='submit'] { background: $primary; color: #fff; }
 }
 @import 'partials/media_queries';
+
+body { background-color: red; }

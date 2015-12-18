@@ -278,13 +278,12 @@ h2.banner {
   padding: 0;
   border-radius: 1px; }
   #nav li.call span:hover {
-    background-color: #2c3f4f; }
+    background-color: #219d83; }
   #nav li.call a {
     padding: 2px;
-    color: #2c3f4f; }
+    color: #fff; }
     #nav li.call a:hover {
-      color: #fff;
-      background-color: #2c3f4f; }
+      color: #fff; }
 
 h2 {
   font-size: 21pt;
@@ -950,3 +949,6 @@ p.em {
       border-bottom: none; }
   #footerToggle {
     bottom: 65px; } }
+
+body {
+  background-color: red; }

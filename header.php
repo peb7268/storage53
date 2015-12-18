@@ -29,7 +29,7 @@
             <?php $allPages   = get_pages(); ?>
             <?php $page_order = st_get_page_order($allPages); ?>
             <?php st_build_nav($page_order, $allPages); ?>
-            <li class="call"><span><a href="tel:6786717166">Call</a></span></li>
+            <li class="call"><span><a href="tel:6786717166">678-671-7166</a></span></li>
         </ul>
     </div>
 </header>
