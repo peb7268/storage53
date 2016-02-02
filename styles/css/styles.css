@@ -523,6 +523,7 @@ ul .fa-info-circle {
   padding: 0; }
 
 #rates_content {
+  width: 100%;
   float: left; }
   #rates_content .rates {
     overflow: hidden;
@@ -626,6 +627,16 @@ p.em {
 #form input[type='submit'] {
   background: #219d83;
   color: #fff; }
+
+#loading {
+  width: 50%;
+  margin: 25px auto 0; }
+  #loading p {
+    margin: 0 0 10px;
+    text-align: center; }
+  #loading img {
+    display: block;
+    margin: 0 auto; }
 
 /* Media Queries */
 @media (max-width: 1450px) {
@@ -949,6 +960,3 @@ p.em {
       border-bottom: none; }
   #footerToggle {
     bottom: 65px; } }
-
-body {
-  background-color: red; }

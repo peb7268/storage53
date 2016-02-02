@@ -1,6 +1,6 @@
     <script src="<?php echo TEMPLATE_DIR ?>/js/vendors/angular/angular.js"></script>
     <script src="<?php echo TEMPLATE_DIR ?>/js/src/app.js"></script>
-	
+	<?php wp_footer(); ?>	
 	<a id="footerToggle" href="#">
 		<i class="fa fa-comment"></i>
 	</a>

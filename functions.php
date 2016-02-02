@@ -1,5 +1,4 @@
 <?php
-//die('local');
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
@@ -9,8 +8,9 @@ define('IMAGE_DIR', get_template_directory_uri().'/img');
 
 add_action('wp_enqueue_scripts', 'register_scripts');
 
-function register_scripts()
-{
+function register_scripts(){
+    global $post;
+
     wp_register_script('global', TEMPLATE_DIR . '/js/global.js', array());
     wp_enqueue_script('jquery');
     wp_enqueue_script('global');
