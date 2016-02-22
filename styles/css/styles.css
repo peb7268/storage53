@@ -29,6 +29,19 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+html {
+  height: 100%;
+  background-color: #f7f6f4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f6f4), to(#cacaca));
+  background-image: -webkit-linear-gradient(top, #f7f6f4, #cacaca);
+  background-image: -moz-linear-gradient(top, #f7f6f4, #cacaca);
+  background-image: -o-linear-gradient(top, #f7f6f4, #cacaca);
+  background-image: -ms-linear-gradient(top, #f7f6f4, #cacaca);
+  background-image: linear-gradient(top, #f7f6f4, #cacaca);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f7f6f4', EndColorStr='#cacaca');
+  background-repeat: no-repeat;
+  padding-bottom: 110px; }
+
 body {
   line-height: 1; }
 
@@ -53,15 +66,7 @@ body {
   font-weight: 300;
   font-size: 12pt;
   line-height: 1.2;
-  background-color: #f7f6f4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f6f4), to(#cacaca));
-  background-image: -webkit-linear-gradient(top, #f7f6f4, #cacaca);
-  background-image: -moz-linear-gradient(top, #f7f6f4, #cacaca);
-  background-image: -o-linear-gradient(top, #f7f6f4, #cacaca);
-  background-image: -ms-linear-gradient(top, #f7f6f4, #cacaca);
-  background-image: linear-gradient(top, #f7f6f4, #cacaca);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f7f6f4', EndColorStr='#cacaca');
-  background-repeat: no-repeat; }
+  height: 100%; }
 
 a {
   text-decoration: none;
@@ -151,12 +156,15 @@ header {
       #nav li span:hover {
         background: #219d83; }
 
+#hero {
+  overflow: hidden;
+  max-height: 400px; }
+
 #content {
   position: relative;
   z-index: 1;
-  min-height: 1200px;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   max-width: 960px;
   padding: 0; }
 
@@ -637,6 +645,36 @@ p.em {
   #loading img {
     display: block;
     margin: 0 auto; }
+
+#reserveForm {
+  display: none;
+  width: 700px;
+  margin: 0 auto; }
+  #reserveForm .form-group {
+    margin: 0 0 20px;
+    border-bottom: 1px solid #555;
+    padding: 20px;
+    box-sizing: border-box; }
+    #reserveForm .form-group:last-child {
+      padding-top: 10px;
+      border-bottom: none; }
+  #reserveForm input {
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin: 0 0 5px;
+    padding: 4px 7px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 11pt; }
+  #reserveForm input[type="submit"] {
+    background: #219d83;
+    color: #fff;
+    font-size: 14pt; }
+  #reserveForm input[type="checkbox"] {
+    float: left;
+    margin: 5px 10px 0 0;
+    width: initial; }
 
 /* Media Queries */
 @media (max-width: 1450px) {

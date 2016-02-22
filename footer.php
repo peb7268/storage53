@@ -1,4 +1,5 @@
     <script src="<?php echo TEMPLATE_DIR ?>/js/vendors/angular/angular.js"></script>
+    <script src="<?php echo TEMPLATE_DIR ?>/js/vendors/angular-sanitize/angular-sanitize.js"></script>
     <script src="<?php echo TEMPLATE_DIR ?>/js/src/app.js"></script>
 	<?php wp_footer(); ?>	
 	<a id="footerToggle" href="#">

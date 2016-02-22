@@ -3,7 +3,9 @@
 get_header();
 ?>
 
-<?php echo st_get_headers($allPages); ?>
+<div id="hero">
+	<?php echo st_get_headers($allPages); ?>
+</div>
 
 <section id="content">
     <div class="wrapper">

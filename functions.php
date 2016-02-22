@@ -12,8 +12,15 @@ function register_scripts(){
     global $post;
 
     wp_register_script('global', TEMPLATE_DIR . '/js/global.js', array());
+    wp_register_script('fancybox', TEMPLATE_DIR . '/js/vendors/fancybox/source/jquery.fancybox.pack.js', array('jquery'), null, true);
+
+    wp_register_style('fancybox', TEMPLATE_DIR . '/js/vendors/fancybox/source/jquery.fancybox.css', array(), null, 'all');
+
     wp_enqueue_script('jquery');
     wp_enqueue_script('global');
+
+    wp_enqueue_style('fancybox');
+    wp_enqueue_script('fancybox');
 }
 
 #Remove some default WP crap
@@ -33,7 +40,11 @@ function st_get_headers($allPages){
 function st_get_content($allPages){
     $pages = [];
     foreach($allPages as $page):
-        if(strpos($page->post_title, 'page-') !== FALSE) $pages[$page->menu_order] = $page->post_content;
+        if(strpos($page->post_title, 'page-') !== FALSE) { 
+            $content = $page->post_content;
+            $content = apply_filters('the_content', $content);
+            $pages[$page->menu_order] = $content;
+        }
     endforeach;
 
     ksort($pages);
