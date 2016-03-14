@@ -14,6 +14,28 @@ App.controller('AppController', ['$scope', '$http', '$sanitize', function($scope
     $scope.name = 'Skilltouch | Elegance In Motion';
     var hash 	= window.location.hash;
 	
+	//Mocked Data
+	$scope.customer 			= {};
+	$scope.customer.first_name 	= 'Chris';
+	$scope.customer.last_name 	= 'Gheorgies';
+	$scope.customer.phone 		= '6786175386';
+	$scope.customer.email 		= 'peb7268@gmail.com';
+	$scope.customer.address 	= '304 Sweetwater ridge';
+    $scope.customer.city 		= 'Hoschton';
+    $scope.customer.state 		= 'GA';
+    $scope.customer.zip 		= '30548';
+
+
+    $scope.cc   		= {};
+    $scope.cc.name 		= 'Chris Gheorgies';
+    $scope.cc.number 	= '4246315214167346';
+    $scope.cc.address 	= '304 Sweetwater ridge';
+    $scope.cc.city 		= 'Hoschton';
+    $scope.cc.state 	= 'GA';
+    $scope.cc.cid 		= '3732';
+    $scope.cc.exp 		= '08/18';
+
+
 	$scope.togglePage 	= function($event, $i){
 		if(typeof $i == 'undefined') $i = 1;
     	$scope.tab = $i;
@@ -26,6 +48,8 @@ App.controller('AppController', ['$scope', '$http', '$sanitize', function($scope
     	var $rowToReserve 	= $($event.target).parent().parent();
     	var qtyRemaining 	= $rowToReserve.data('qty-remaining');
     	
+    	App.reservation.unitId 	= $($event.target).parent().parent().parent().data('unit-id');
+
     	$.fancybox({
         	href: '#reserveForm'        	
     	});
@@ -65,12 +89,10 @@ App.controller('AppController', ['$scope', '$http', '$sanitize', function($scope
     	*/
 
     	//var date = new Date();
-    	//date.toISOString();
 		$scope.reservation = {
-			"ReservationDay": "3/15/2016",
 			"Units": [{
-			    "UnitID": 12345,
-			    "InsuranceID": 123
+			    "UnitID": App.reservation.unitId,
+			    "InsuranceID": null
 			}],
 			"PaymentInfo": {
 			    "FirstName": $scope.formData.first_name,
@@ -85,11 +107,26 @@ App.controller('AppController', ['$scope', '$http', '$sanitize', function($scope
 			    //"CreditCard": $scope.formData.number,
 			    //"ExpirationMMYY": '3732'$scope.formData.exp,
 			    //"CSC": $scope.formData.cid
-			    "CreditCard": '371335053008000',
-			    "ExpirationMMYY": '08/18',
-			    "CSC": '3732'
+			    // "CreditCard": '371335053008000',
+			    // "ExpirationMMYY": '08/18',
+			    // "CSC": '3732'
+			    "CreditCard": '4246315214167346',
+			    "ExpirationMMYY": '0816',
+			    "CSC": '825'
 			}
 		};
+
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
+
+		if(dd<10) dd='0'+dd;
+		if(mm<10) mm='0'+mm;
+
+		today = mm+'/'+dd+'/'+yyyy;
+
+		$scope.reservation.ReservationDay = today;
 
     	var dto 		= {};
 		dto.base 		= 'https://api.webselfstorage.com/wssapi/v1';
@@ -104,12 +141,19 @@ App.controller('AppController', ['$scope', '$http', '$sanitize', function($scope
 		});
 
 		req.done(function(resp){
-			$scope.reservationResp = JSON.parse(resp);
+			$scope.reservationResp = resp = JSON.parse(resp);
 			
-			var p = $('<p />', {
-				text: resp.Success + ': ' + resp.ErrorMessage
-			});
-			angular.element('#content .wrapper .show').append(p);
+			if(resp.Success == true){
+				var p = $('<p />', {
+					text: 'Thank you for your purchase. Your reservation number is: ' + resp.ReservationNumber
+				});
+			} else {
+				var p = $('<p />', {
+					text: 'Oops there was an error: ' + resp.ErrorMessage
+				});
+			}
+			
+			$('#content .wrapper .show').html(p);	
 			
 			$.fancybox.close();
 		});
@@ -139,6 +183,7 @@ App.controller('AppController', ['$scope', '$http', '$sanitize', function($scope
 			resp = JSON.parse(resp).Location;
 			$scope.locationData = resp;
 			
+			App.reservation 		= {};
 			angular.element('#loading').fadeOut(100, function(){
 				$scope.$apply();
 			});

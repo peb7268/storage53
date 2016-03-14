@@ -676,6 +676,9 @@ p.em {
     margin: 5px 10px 0 0;
     width: initial; }
 
+.bold {
+  font-weight: bold; }
+
 /* Media Queries */
 @media (max-width: 1450px) {
   .hero {
